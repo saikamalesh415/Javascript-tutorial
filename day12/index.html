@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a =[1,2,3];
+        console.log(a);
+        console.log(a[1]);
+        let arr = new Array(5);
+        console.log(arr);
+        arr[0]=100;
+        arr[1]=200;
+        arr[2]=300;
+        console.log(arr);
+
+        let str = new Array("Hii");
+        console.log(str);
+        console.log(new Array(10,20,30));
+        
+        let nums = [10,20,30,40];
+        console.log(nums.at(0));
+        console.log(nums.at(-1));
+        console.log(nums.at(100));
+
+        let name =["hi","l","love"];
+        console.log(nums.concat(name));
+        console.log(nums);
+
+        let num=[1,2,3];
+        num.push(4,5);
+        console.log(num);
+
+        let delete_val = num.pop();
+        console.log(delete_val);
+        console.log(num);
+
+        num.shift();
+        num.shift();
+        console.log(num);
+
+        num.unshift(33);
+        console.log(num);
+
+        let greet=["Hello","Hii","Bye","HAU"];
+        let A = greet.slice(1);
+        console.log(A);
+        console.log(greet);
+        console.log(greet.slice(1,3));
+
+        let price = [100,200,300];
+        let B = price.splice(1,2);
+        console.log(B);
+        console.log(price);
+        price.splice(0,1,1000,2000,3000);
+        console.log(price);
+
+        let nested_arr=[1,[2],[3,4,[5]],6,7,8];
+        console.log(nested_arr.flat());
+        console.log(nested_arr);
+        console.log(nested_arr.flat(3));
+
+        let nested=[[[[[[[[1000]]]]]]]];
+        console.log(nested.flat(Infinity));
+
+        let product=['a','b','c','d'];
+        console.log(product);
+        console.log(product.reverse());
+        console.log(product);
+
+        console.log(product.join());
+        console.log(product.join(""));
+        console.log(product.join(" "));
+
+        let data=[10,20,30,"hii js","hii React",30,20];
+        console.log(data.indexOf(20));
+        console.log(data.indexOf("hii"));//-1
+
+        console.log(data.lastIndexOf(20));
+        console.log(data.lastIndexOf("hii"));
+    </script>
+</body>
+</html>

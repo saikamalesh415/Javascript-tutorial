@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    <p><h3>4 Arrow function :</h3> 1.short syntax
+    <br> 2.time method <br> 3. it doesnot support its own this keyword <br> 4.it doesnt support argument support</p>
+    <p> <h3>5 Call back function :</h3>
+        a fuctions which is passing as paramater for another function is called <b>call back function</b>
+        <pre> example : 
+                function S_person(){
+                console.log("Sales person show the product");
+                }
+                cust(S_person);
+                S_person() is call back function
+        </pre>
+    </p>
+    <p>
+        <h3>6 Higher Order Function</h3>
+        a function which can accept a function as argument or return a function is called <b>Higher Order Function</b>
+    </p>
+    <script>
+        let a = ()=>{
+            console.log("hi");
+        }
+        a();
+        let add = (a,b)=>{
+            console.log(a+b);
+        }
+        add(20,20);
+        let b = ()=>"hi";
+        console.log(b());
+        let c =()=>{
+            return "explectreturn";
+        }
+        console.log(c());
+
+
+        function mul(a,b){
+            return a*b;
+        }
+        console.log(mul(10,20));
+
+        let multi = (a,b)=> a*b;
+        console.log(multi(5,5));
+
+
+        function cust(s_p){
+            console.log("customer came to the shop");
+            s_p();
+            console.log("customer by the product which is hown by salesman");
+        }
+
+        function S_person(){
+            console.log("Sales person show the product");
+        }
+        cust(S_person);
+
+        function mainfun(){
+            return function (){
+                console.log("inner function ");
+            };
+        };
+        let hof = mainfun();
+        hof();
+        let glb = "xyz";
+        (
+            function(){
+                let iife = "not";
+                console.log("IIFE acessing var from out side the fun "+glb);
+            }
+        )();
+        // console.log(iife);
+        function method1(){
+            let varrr = "not";
+            console.log(glb);
+        }
+        method1();
+
+        function* fun(){
+            console.log("start");
+            yield 100;
+            yield 200;
+        }
+        console.log(fun());
+        let f = fun();
+        console.log(f.next());
+        console.log(f.next());
+        console.log(f.next());
+        console.log(f.next().value);
+        console.log(f.next());
+        let count=0;
+        function* emp_id(){
+            while(true){
+                yield `Employee id is ${count++}`;
+            }
+        }
+        let e = emp_id();
+        console.log(e.next().value);
+    </script>
+</body>
+</html>

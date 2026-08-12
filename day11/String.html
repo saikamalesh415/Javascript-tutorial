@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str1 = new String("balu");
+      let str2 = String("bhanu");
+      console.log(str1, typeof str1);
+      console.log(str2, typeof str2);
+
+      let name = "Sai Kamalesh";
+      console.log(name.toUpperCase());
+      console.log(name.toLowerCase());
+
+      console.log(name.at(0)); // S
+      console.log(name.at(-1)); // h
+      console.log(name.at(100)); //undefined
+
+      console.log(name.charAt(0)); // S
+      console.log(name.charAt(-1)); // ""
+      console.log(name.charAt(100)); // ""
+
+      console.log(name.concat(" hello" , " guru"));
+
+      let ani = "ant🐜";
+      console.log(ani.charCodeAt(0));//97
+      console.log(ani.charCodeAt(3));//55357
+      console.log(ani.charCodeAt(-1));//Nan not a number
+
+      console.log(ani.codePointAt(0));
+                             //  | ind - 16
+      let sub = "hello guru, hii guru";
+      console.log(sub.lastIndexOf("guru"));//16
+
+      console.log(sub.replace("guru","good")); //hello good, hii guru
+      console.log(sub.replaceAll("guru","good"));//hello good, hii good
+
+      let greet = "Hello";
+      console.log(greet.slice(1,4));//ell
+      console.log(greet.slice(4,1));//""
+      console.log(greet.slice(-4,-1));//ell
+
+      console.log(greet.substring(1,4));
+      console.log(greet.substring(-4,-1));
+      console.log(greet.substring(-1));
+      console.log(greet.substring(4,1));//ell
+
+      let fun="      Hello        ";
+      console.log(fun);
+      console.log(fun.trimStart());
+      console.log(fun.trimEnd());
+      console.log(fun.trim());
+
+      let data ="Hii Iam JavaScript";
+      console.log(data.split());
+      console.log(data.split(""));
+      console.log(data.split(" "));
+      console.log(data.split("a"));
+
+      console.log(data.includes("I"));
+      console.log(data.includes("Iam"));
+      console.log(data.includes("java"));
+      console.log(data.includes("JavaS"));
+
+      console.log(data.startsWith("Hii"));
+      console.log(data.startsWith("hii"));
+
+      let x = "Hello";
+      console.log(x.repeat(10));
+
+      let y=10;
+      console.log(y.toString() , typeof y.toString());
+
+      
+    </script>
+  </body>
+</html>
