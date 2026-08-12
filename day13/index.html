@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // type 1 obj creation
+        let data={
+            name : "abc",
+            age : 22
+        }
+        console.log(data);
+        data.number=1234567890;
+        console.log(data);
+
+        // type 2 obj creation
+        let obj = new Object({age:30});
+        obj.name="raj";
+        console.log(obj);
+
+        // type 3 obj creation
+        function User(name,age){
+            this.name=name;
+            this.age=age;
+        }
+        let x = new User("appu",22);
+        console.log(x);
+    </script>
+</body>
+</html>

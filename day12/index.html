@@ -81,6 +81,65 @@
 
         console.log(data.lastIndexOf(20));
         console.log(data.lastIndexOf("hii"));
+
+
+        // find method --------------------------------------------------------------
+        // it is like if in the array
+        let product_price  = [100,98,101,200,1000];
+        let ele = product_price.find((i)=>i>100);
+        console.log(ele);
+
+        // Map method
+        // it will apply to all values
+        let  Num = [10,20,30];
+        let M =Num.map((v,i,arr)=>{
+            return v+10;
+        })
+        console.log(M);
+
+        // filter method ----------------------------------
+        // find the required value
+        let Num1 = [1,2,3,4,5];
+        let M1 = Num1.filter((v)=>{return v%2==0;});
+        console.log(M1);
+        console.log(Num1);
+
+        let names1=['dholu','bhanu','arvind'];
+        let namescap = names1.map(function(v,i,names1){
+            return v.toUpperCase()
+        });
+        console.log(namescap);
+        
+        let user1 = [
+            {name:"dholu",age:18},
+            {name:"bhanu",age:22},
+            {name:"arvind",age:43}
+        ];
+
+        let finduser1 = user1.filter((v)=>{
+            return v.age > 20;
+        });
+        console.log(finduser1);
+
+        // Reduce function 
+        //  it is used to reduce from group of values to single values
+        let price_details = [10,20,30,40];
+        let res_price = price_details.reduce((acc,cum)=>{
+            return acc+cum;
+        },0);
+        console.log(res_price);
+
+        console.log(Array.isArray(true));
+        console.log(Array.isArray(100));
+        console.log(Array.isArray([]));
+
+        let Numbers=[2,4,2,1];
+        console.log(Numbers.sort());
+        console.log(['c','b','a','d'].sort());
+        console.log([100,5,2,1].sort());
+
+        console.log([100,5,2,1].sort((a,b)=>{ return b-a; }));
+        
     </script>
 </body>
 </html>
