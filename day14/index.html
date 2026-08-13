@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object Methods</h1>
+    <p>
+        <h2>1 . Oject.keys(objectname)</h2>
+        <p> it will give all the keys present in the object in array formate</p>
+        <h2>2. Object.values(objectname)</h2>
+        <p>it will give all the values present in the object in array formate</p>
+        <h2>3. Object.entries(objectname)</h2>
+        <p>it will give all the properties in array of array formate</p>
+        <h2>4 Object.seal(objectname)</h2>
+        <p>
+            in this we can seal the abject  <br>
+                1 upadation is possible <br>
+                2 adding new key not possible <br>
+                3 deleting key is not possible <br>
+        </p>
+        <h2>5. Object.freeze(objectname)</h2>
+        <p>
+            in this we can freeze the abject  <br>
+                1 upadation is not possible <br>
+                2 adding new key not possible <br>
+                3 deleting key is not possible <br>
+        </p>
+    </p>
+    <script>
+        let obj ={
+            name : "abc",
+            age : 20,
+            1 : "id"
+        };
+        console.log(obj);
+        console.log(obj.name);
+        console.log(obj["name"]);
+        console.log(obj[1]);
+
+        let k = Object.keys(obj);
+        console.log(k);
+
+        let v = Object.values(obj);
+        console.log(v);
+
+        let p = Object.entries(obj);
+        console.log(p);
+
+        let user_data={
+            user_name : "abc",
+            phno : 1234567890,
+            salary : 1234
+        }
+        Object.seal(user_data);
+        user_data.phno = 9876543210;
+        console.log(user_data);
+        user_data.id=123;
+        console.log(user_data);
+        delete user_data.phno;
+        console.log(user_data);
+
+        let bank_data={
+            name :"xyz",
+            account : "saving",
+            ifsc : 1273
+        }
+        console.log(bank_data);
+        Object.freeze(bank_data);
+        bank_data.ifsc=10000;
+        console.log(bank_data);
+        bank_data.id="123";
+        console.log(bank_data);
+        delete bank_data.name;
+        console.log(bank_data);
+
+        console.log(Object.isSealed(user_data));
+        console.log(Object.isFrozen(bank_data));
+
+        function User(name,phone){
+            this.name=name;
+            this.phone=phone;
+        }
+        let user1 = new User("abc",1234567890);
+        let user2 = new User("efg",9876543210);
+        User.prototype.alternativeNum= function(){
+            console.log("can provide alternative number");
+        }
+        user2.alternativeNum();
+        console.log(user1);
+
+        var a = 1000;
+        aa = 100;
+        let aaa = 10;
+        console.log(window);
+        console.log(window.location);
+        console.log(window.history);
+        console.log(window.navigation);
+        window.alert("hello this an window alert");
+    </script>
+</body>
+</html>
