@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let customers = [
+            { id: 1, name: "Rahul", email: "rahul@gmail.com" },
+            { id: 2, name: "Priya", email: "priya@gmail.com" },
+            { id: 3, name: "RAHUL", email: "RAHUL@gmail.com" },
+            { id: 4, name: "Arjun", email: "arjun@gmail.com" }
+        ];
+        let obj ={};
+        let cname = customers[0].name.toLocaleLowerCase();
+        let cemail = customers[0].email;
+        // console.log(cname);
+        // if(obj[cname] == undefined){
+        //     console.log("not contain");
+        // }
+        // obj[cname] = 1;
+        // console.log(obj);
+        let arr = [];
+        let cobj ={};
+        cobj.name = cname;
+        cobj.email = cemail;
+        arr.push(cobj);
+        console.log(arr);
+    </script>
+</body>
+</html>
